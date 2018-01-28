@@ -9,7 +9,7 @@ export function getMatchingFileNames(
       return;
     }
 
-    if (new RegExp(reg).test(fileName)) {
+    if (RegExp(reg).test(fileName)) {
       matched.push(reg);
     }
   });
