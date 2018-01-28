@@ -3,6 +3,29 @@ import { File } from 'parse-diff';
 import PullRequest from './pullRequest';
 import { getMatchingFileNames } from './matchFileName';
 
+/**
+ * The callback function receives a list of file objects that match the filename.
+ *
+ * This function can use from the file object and the diff within to decide what
+ * checklist to show.
+ *
+ * The string returned will ideally be a markdown list (or a checklist).
+ *
+ * Unordered List:
+ *
+ * - item
+ * - item
+ *
+ * Ordered List:
+ *
+ * 1. item
+ * 2. item
+ *
+ * Checklist:
+ *
+ * - [ ] item
+ * - [x] completed item
+ */
 type CallbackFn = (file?: File[], pullRequest?: PullRequest) => string;
 
 interface CallbacksMap {

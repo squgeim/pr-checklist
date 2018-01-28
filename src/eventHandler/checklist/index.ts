@@ -1,1 +1,1 @@
-import './migration';
+import './example';
