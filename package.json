@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "node ./dist",
     "start:local": "nodemon --watch src --exec ts-node ./src/index.ts",
     "build": "tsc",
     "prettify": "prettier ./src/**/*.ts --write",
