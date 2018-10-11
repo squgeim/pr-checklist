@@ -1,5 +1,5 @@
 class Checklist {
-  list: string[];
+  list: string[] = [];
 
   push(line: string) {
     this.list.push(line);
